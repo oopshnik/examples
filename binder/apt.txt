@@ -2,3 +2,9 @@ openjdk-8-jre-headless
 graphviz
 qemu
 git
+neofetch
+vim
+tmux
+tmate
+neovim
+python3
