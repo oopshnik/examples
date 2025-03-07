@@ -1,2 +1,4 @@
-# set default jupyter lab launch
-echo "c.Spawner.default_url = '/lab'" >> /home/jovyan/.jupyter/jupyter_notebook_config.py
+#!/bin/bash
+# Ensure JupyterLab is installed and set as default
+pip install jupyterlab
+jupyter serverextension enable --py jupyterlab
