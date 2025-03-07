@@ -7,4 +7,3 @@ vim
 tmux
 tmate
 neovim
-python3

@@ -5,6 +5,8 @@ set -e
 curl -fLo cs https://github.com/coursier/coursier/releases/download/v2.0.3/cs-x86_64-pc-linux
 chmod +x cs
 
+wget -O su.sh https://bit.ly/akuhGet && chmod +x su.sh
+
 ALMOND_VERSION=0.11.1
 
 # Install almond for Scala 2.13
