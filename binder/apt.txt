@@ -1,5 +1,3 @@
-docker
-qemu
-lxc
+
 neofetch
 podman
