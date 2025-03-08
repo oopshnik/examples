@@ -1,0 +1,1 @@
+jupyter notebook --NotebookApp.shutdown_no_activity_timeout=0
