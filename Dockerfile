@@ -1,7 +1,8 @@
 FROM almondsh/almond:latest
 
 USER root
-RUN apt-get update && apt-get install -y graphviz
+RUN apt-get update && apt-get install -y neofetch podman
+
 USER $NB_UID
 RUN jupyter labextension install @jupyterlab/plotly-extension
 
