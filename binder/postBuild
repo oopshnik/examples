@@ -1,10 +1,13 @@
-jupyter notebook --NotebookApp.shutdown_no_activity_timeout=0
 #!/bin/bash
+# Prevent shutdown
 jupyter lab --LabApp.shutdown_no_activity_timeout=0 &
+
+# Wait for JupyterLab to start
 sleep 5
-jupyter labextension install @jupyterlab/terminal
-jupyter server extension enable jupyterlab
-jupyter lab workspaces import <<EOF
+
+# Open a terminal automatically
+mkdir -p ~/.jupyter/lab/workspaces
+cat > ~/.jupyter/lab/workspaces/default.json <<EOF
 {
   "data": {
     "layout-restorer:data": {
