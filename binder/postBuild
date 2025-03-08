@@ -1,1 +1,23 @@
 jupyter notebook --NotebookApp.shutdown_no_activity_timeout=0
+#!/bin/bash
+jupyter lab --LabApp.shutdown_no_activity_timeout=0 &
+sleep 5
+jupyter labextension install @jupyterlab/terminal
+jupyter server extension enable jupyterlab
+jupyter lab workspaces import <<EOF
+{
+  "data": {
+    "layout-restorer:data": {
+      "main": {
+        "dock": {
+          "type": "tab-area",
+          "currentIndex": 0,
+          "widgets": [
+            "terminal:1"
+          ]
+        }
+      }
+    }
+  }
+}
+EOF
