@@ -1,3 +1,4 @@
 
 neofetch
 podman
+xterm
