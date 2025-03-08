@@ -1,26 +1,9 @@
 #!/bin/bash
-# Prevent shutdown
+# Prevent auto-shutdown
 jupyter lab --LabApp.shutdown_no_activity_timeout=0 &
 
 # Wait for JupyterLab to start
 sleep 5
 
-# Open a terminal automatically
-mkdir -p ~/.jupyter/lab/workspaces
-cat > ~/.jupyter/lab/workspaces/default.json <<EOF
-{
-  "data": {
-    "layout-restorer:data": {
-      "main": {
-        "dock": {
-          "type": "tab-area",
-          "currentIndex": 0,
-          "widgets": [
-            "terminal:1"
-          ]
-        }
-      }
-    }
-  }
-}
-EOF
+# Open JupyterLab terminal
+jupyter lab /terminals/1
